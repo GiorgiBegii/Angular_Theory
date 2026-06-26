@@ -1,4 +1,4 @@
-The **Call Stack** is a [[Data structures |LIFO]] (Last In, First Out) data structure used by the JavaScript engine to keep track of function execution.
+The **Call Stack** is a [[LIFO|LIFO]] (Last In, First Out) data structure used by the JavaScript engine to keep track of function execution.
 
 - Every function call creates a **stack frame**.
 - Frames are pushed onto the stack when functions are called.

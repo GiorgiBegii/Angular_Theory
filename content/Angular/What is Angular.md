@@ -1,0 +1,1 @@
+Angular is a TypeScript-based frontend framework for building scalable web applications. It provides built-in solutions for routing, forms, dependency injection, and HTTP communication, allowing developers to focus on business logic instead of setting up infrastructure.
