@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx quartz plugin install && npx quartz build",
+  "buildCommand": "rm -rf .quartz/plugins && npx quartz plugin install --clean --concurrency 1 && npx quartz build",
   "outputDirectory": "public",
   "cleanUrls": true
 }
