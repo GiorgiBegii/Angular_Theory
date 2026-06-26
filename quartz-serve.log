@@ -1,0 +1,18 @@
+
+ Quartz v5.0.0  
+
+Cleaned output directory `public` in 24ms
+Found 3 input files from `content` in 57ms
+Parsing input files using 1 threads
+
+Warning: content/Call Stack.md isn't yet tracked by git, dates will be inaccurate
+
+Warning: content/Data Structures.md isn't yet tracked by git, dates will be inaccurate
+
+Warning: content/Zone.js.md isn't yet tracked by git, dates will be inaccurate
+Parsed 3 Markdown files in 2s
+Filtered out 0 files in 302μs
+Emitting files
+Emitted 53 files to `public` in 2s
+Done processing 3 files in 5s
+Started a Quartz server listening at http://localhost:8080
