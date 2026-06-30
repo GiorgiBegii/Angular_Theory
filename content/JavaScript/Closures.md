@@ -33,9 +33,9 @@ When a function is created, JavaScript stores a reference to its **Lexical Envir
 ```
 outer()
 message = "Hello"
-↓
+â†“
 returns inner()
-↓
+â†“
 inner still remembers
 message = "Hello"
 ```
@@ -111,10 +111,10 @@ Output
 ```
 Stack
 increment      
-│      
-▼
+â”‚      
+â–¼
 HeapFunction
-↓
+â†“
 Lexical Environment
 count = 3
 ```
@@ -207,7 +207,7 @@ You cannot access:
 user.password
 ```
 
-↓
+â†“
 
 ```
 undefined

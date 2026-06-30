@@ -1,4 +1,4 @@
-### FIFO (First In, First Out)
+﻿### FIFO (First In, First Out)
 **FIFO means: the first thing you put in is the first thing you take out.**
 
 <span style="color:#00ff41;">Think about people standing in a queue:</span>
@@ -20,3 +20,4 @@ So:
 - First out → **A**
 
 That's why it's called **First In, First Out (FIFO)**.
+

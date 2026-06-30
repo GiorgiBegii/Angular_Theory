@@ -1,4 +1,4 @@
-### LIFO (Last In, First Out)
+﻿### LIFO (Last In, First Out)
 **LIFO** means: the last thing you put in is the first thing you take out.**
 
 <span style="color:#00ff41;">Think about a stack of plates:</span>
@@ -22,3 +22,4 @@ So:
 - First out → **C**
 
 That's why it's called **Last In, First Out (LIFO)**.
+

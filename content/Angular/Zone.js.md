@@ -1,4 +1,4 @@
-**Zone.js** is a library Angular used to know **when [[questions]] work finishes**, so Angular can run **change detection** and update the UI.
+**Zone.js** is a library Angular used to know **when async work finishes**, so Angular can run **change detection** and update the UI.
 
 Examples of async work:
 
@@ -11,15 +11,15 @@ setInterval()
 ```
 
 Zone.js patches these APIs and tells Angular:
-> “Something async happened. Maybe the UI changed. Run change detection.”
+> â€œSomething async happened. Maybe the UI changed. Run change detection.â€
 
 ```
 User clicks button / HTTP finishes / timer finishes
-↓  
+â†“  
 Zone.js detects async task  
-↓  
+â†“  
 Angular runs change detection  
-↓  
+â†“  
 Template updates
 ```
 

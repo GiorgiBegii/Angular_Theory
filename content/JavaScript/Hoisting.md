@@ -1,4 +1,4 @@
-# What is Hoisting?
+﻿# What is Hoisting?
 
 **Hoisting is JavaScript's behavior of processing declarations before executing the code.**
 
@@ -418,3 +418,4 @@ undefined
 In ES modules, even top-level `var` does **not** become a property of the global object.
 
 ---
+

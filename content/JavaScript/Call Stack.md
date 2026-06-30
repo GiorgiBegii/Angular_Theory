@@ -1,3 +1,4 @@
+<a href="https://www.youtube.com/watch?v=YTLXrji4DJc&t=3s">🎥 Video</a>
 The **Call Stack** is a [[LIFO|LIFO]] (Last In, First Out) data structure used by the JavaScript engine to keep track of function execution.
 
 - Every function call creates a **stack frame**.
@@ -108,3 +109,4 @@ Angular change detection
 ```
 
 In zoneless Angular, change detection is triggered by Signals or explicit APIs instead.
+

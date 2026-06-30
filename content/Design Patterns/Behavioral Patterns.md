@@ -1,4 +1,4 @@
-**Focus on communication and responsibilities between objects.**
+﻿**Focus on communication and responsibilities between objects.**
 
 ### Observer 
 
@@ -53,3 +53,4 @@ Iterator provides a standard way to traverse a collection without exposing its i
 Visitor allows us to add new operations to existing objects without changing those objects. 
 
 Visitor allows adding new operations to existing objects without modifying their classes. Angular doesn't have a strong built-in Visitor example, but traversing form trees (FormGroup, FormControl, FormArray) and applying operations such as validation or serialization follows a similar idea.
+

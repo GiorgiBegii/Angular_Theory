@@ -37,8 +37,8 @@ Variable contains only a reference.
 Stack
 user 
 
-│ 
-▼
+â”‚ 
+â–¼
 
 Heap
 {   
@@ -137,7 +137,7 @@ Output
 ```js
 {  
 	name: "John",  
-	sayHello: ƒ
+	sayHello: Æ’
 }
 	
 John
@@ -157,11 +157,11 @@ this === user
 Think of it like:
 ```
 user.sayHello()
-↓
+â†“
 Who called sayHello?
-↓
+â†“
 user
-↓
+â†“
 this = user
 ```
 
@@ -200,13 +200,13 @@ Different caller.
 
 ```
 user1.sayHello()
-↓
+â†“
 this = user1
 ```
 
 ```
 user2.sayHello()
-↓
+â†“
 this = user2
 ```
 
@@ -221,7 +221,7 @@ function greet() {
 greet();
 ```
 
-In strict mode:
+In [[Modules and Application Structure#Strict Mode|Strict Mode]]:
 ```js
 undefined
 ```
@@ -260,7 +260,7 @@ Why?
 Originally
 ```
 user.sayHello()
-↓
+â†“
 this = user
 ```
 
@@ -277,9 +277,9 @@ fn();
 Now nobody owns the function.
 ```js
 fn()
-↓
+â†“
 no object
-↓
+â†“
 this = undefined
 ```
 
@@ -314,11 +314,11 @@ Why?
 
 ```js
 company.employee.print()
-↓
+â†“
 Who called print()?
-↓
+â†“
 employee
-↓
+â†“
 this = employee
 ```
 
@@ -381,9 +381,9 @@ undefined
 Because:
 ```
 setTimeout
-↓
+â†“
 calls your function
-↓
+â†“
 this = undefined
 ```
 
@@ -410,15 +410,15 @@ John
 What happens?
 ```
 user.start()
-↓
+â†“
 this = user
-↓
+â†“
 Arrow function created
-↓
+â†“
 Arrow captures current this (user)
-↓
+â†“
 Later setTimeout executes arrow
-↓
+â†“
 Arrow still uses user
 ```
 
@@ -445,21 +445,21 @@ Execution:
 
 ```
 person.sayHello()
-↓
+â†“
 this = person
-↓
+â†“
 console.log(this.name)
-↓
+â†“
 John
-↓
+â†“
 Arrow function created
-↓
+â†“
 Arrow remembers this (person)
-↓
+â†“
 setTimeout executes arrow
-↓
+â†“
 console.log(this.name)
-↓
+â†“
 John
 ```
 
@@ -509,11 +509,11 @@ Every object has an internal prototype.
 
 ```
 user
-↓
+â†“
 User.prototype
-↓
+â†“
 Object.prototype
-↓
+â†“
 null
 ```
 
@@ -572,7 +572,7 @@ const {
 const copy = { ...user };
 ```
 
-👉 "Take everything from `user` and put it into a new object."
+ðŸ‘‰ "Take everything from `user` and put it into a new object."
 
 ---
 
@@ -585,7 +585,7 @@ const result = {
 };
 ```
 
-👉 Copy everything from `a`, then everything from `b`.
+ðŸ‘‰ Copy everything from `a`, then everything from `b`.
 
 **Rule:** **Last property wins.**
 
@@ -609,15 +609,15 @@ const updated = {
 };
 ```
 
-👉 Copy everything, then replace `age`.
+ðŸ‘‰ Copy everything, then replace `age`.
 
 ---
 
 ### Remember
 
-- ✅ Creates a **shallow copy**.
-- ✅ Copies **own enumerable properties**.
-- ❌ Doesn't deep copy nested objects.
+- âœ… Creates a **shallow copy**.
+- âœ… Copies **own enumerable properties**.
+- âŒ Doesn't deep copy nested objects.
 
 # 10. Getters & Setters
 
@@ -648,7 +648,7 @@ const user = {
 console.log(user.fullName);
 ```
 
-👉 Executes `get fullName()`.
+ðŸ‘‰ Executes `get fullName()`.
 
 Returns:
 
@@ -664,7 +664,7 @@ John Doe
 user.fullName = "Alice Smith";
 ```
 
-👉 Executes `set fullName()`.
+ðŸ‘‰ Executes `set fullName()`.
 
 Result:
 
@@ -677,11 +677,65 @@ user.last  // "Smith"
 
 ### Remember
 
-- ✅ **Getter** → runs when **reading** a property.
-- ✅ **Setter** → runs when **writing** a property.
-- ✅ Lets you expose a property while hiding the implementation.
+- âœ… **Getter** â†’ runs when **reading** a property.
+- âœ… **Setter** â†’ runs when **writing** a property.
+- âœ… Lets you expose a property while hiding the implementation.
 
 **Memory trick:**
 
-> **Get = Read 📖**  
-> **Set = Write ✏️**
+> **Get = Read ðŸ“–**  
+> **Set = Write âœï¸**
+
+## Map
+
+`Map` is a key-value collection.
+
+It is useful when you need dynamic keys or keys that are not only strings.
+
+```js
+const userVisits = new Map();
+
+const user = { id: 1 };
+
+userVisits.set(user, 5);
+userVisits.get(user); // 5
+```
+
+Map keys can be any type:
+
+- string
+- number
+- object
+- function
+- symbol
+
+```js
+const map = new Map();
+
+map.set("name", "Ana");
+map.set(1, "numeric key");
+map.set({ id: 1 }, "object key");
+```
+
+Use `Map` when:
+
+- keys are dynamic
+- keys are not only strings
+- frequent add/delete/lookups are needed
+- insertion order matters
+- you need dictionary-like behavior
+
+Use plain objects when:
+
+- you model structured data
+- keys are known property names
+- data shape matters
+
+```js
+const userModel = {
+  id: 1,
+  name: "Ana"
+};
+```
+
+Short idea: object is best for data shape, `Map` is best for dynamic key-value storage.

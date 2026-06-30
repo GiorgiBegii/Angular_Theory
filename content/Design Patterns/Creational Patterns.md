@@ -1,4 +1,4 @@
-**Focus on object creation.**
+﻿**Focus on object creation.**
 
 ### Singleton 
 
@@ -21,3 +21,4 @@ Builder is useful when an object has many options. Instead of creating everythin
 ### Prototype
 
 Angular doesn't directly use the Prototype pattern in everyday development. The Prototype pattern is about creating new objects by copying existing ones. In Angular, we usually create new objects with object spread (...), Object.assign, or by mapping data rather than using explicit clone methods.
+

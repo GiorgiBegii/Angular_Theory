@@ -1,4 +1,4 @@
-**Focus on how classes and objects are composed.**
+﻿**Focus on how classes and objects are composed.**
 
 ### Adapter
 
@@ -35,3 +35,4 @@ Angular uses the Composite pattern in Reactive Forms. FormControl, FormGroup, an
 Flyweight is used when we have many similar objects and want to save memory by sharing common data instead of storing it in every object. 
 
 Flyweight reduces memory usage by sharing common data between many objects. Angular applies similar ideas internally by sharing component metadata, templates, and singleton services instead of duplicating them for every instance.
+
